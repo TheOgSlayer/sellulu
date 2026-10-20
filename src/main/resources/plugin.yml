@@ -1,0 +1,27 @@
+name: SellWorth
+version: 1.0.0
+main: dev.sellworth.SellWorth
+api-version: '1.21'
+depend: [Vault]
+softdepend: [ProtocolLib]
+description: /sell GUI, /worth GUI and hover worth, all driven by prices.yml
+
+commands:
+  sell:
+    description: Open the sell GUI
+    permission: sellworth.sell
+  worth:
+    description: Open the worth menu, or check one item's worth
+    usage: /worth [item]
+    permission: sellworth.worth
+  sellreload:
+    description: Reload prices.yml
+    permission: sellworth.reload
+
+permissions:
+  sellworth.sell:
+    default: true
+  sellworth.worth:
+    default: true
+  sellworth.reload:
+    default: op
